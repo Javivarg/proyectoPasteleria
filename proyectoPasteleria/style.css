@@ -1,0 +1,85 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8; /* Color de fondo suave */
+    color: #333; /* Color de texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Estilos del encabezado */
+header {
+    background-color: #fff; /* Fondo blanco */
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #333; /* Color del enlace */
+}
+
+/* Estilos del cuerpo */
+h1, h2, h3 {
+    color: #333; /* Color de los encabezados */
+}
+
+/* Estilos de enlaces */
+a {
+    color: #007bff; /* Color del enlace */
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos de botones */
+.btn {
+    display: inline-block;
+    background-color: #007bff; /* Color del botón */
+    color: #fff; /* Color del texto del botón */
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #0056b3; /* Color del botón al pasar el ratón */
+}
+
+/* Estilos de imágenes */
+img {
+
+    display: block;
+    margin: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+

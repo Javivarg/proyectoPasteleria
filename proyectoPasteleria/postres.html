@@ -10,120 +10,155 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="Inicio.html">Inicio</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Productos
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <li><a class="dropdown-item" href="#">Pasteles</a></li>
-                  <li><a class="dropdown-item" href="#">Pastelitos</a></li>
-                  <li><a class="dropdown-item" href="postres.html">Postres</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Inicio.html#contacto">Contactos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="Inicio.html#ubicacion">Ubicacion</a>
-              </li>
-              <!--<li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>--->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Productos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Pasteles</a></li>
+              <li><a class="dropdown-item" href="#">Pastelitos</a></li>
+              <li><a class="dropdown-item" href="postres.html">Postres</a></li>
             </ul>
-          </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contacto">Contactos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#ubicacion">Ubicacion</a>
+          </li>
+        </ul>
+        <!-- Aquí está el nuevo botón con una imagen como icono -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">
+              <img src="img/cart.png" alt="Icono" width="20" height="20">
+            </a>
+          </li>
+        </ul>
+        <!-- Aquí termina el nuevo botón -->
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Aquí está la ventana modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Título de la ventana modal</h5>
+          <button type="button" class="close" data-bs-dismiss="modal">×</button>
         </div>
-    </nav>
+         <div class="modal-body">
+            <div class="modal-body">
+              <h5>Productos Seleccionados:</h5>
+              <ul id="listaProductos"></ul>
+              <p id="precioTotal">Total: $0.00</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="vaciarCarritoBtn">Vaciar Carrito</button>
+              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+          </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Aquí termina tu ventana modal -->
+  
+  
+
     
     <div class="container">
 
         <div class="row my-5">
             <h1 class="text-center">POSTRES</h1>
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre1.jpg" class="card-img-top" alt="Pastel" width="200" height="200">
+                <img src="imagenes/Postres/postre1.jpg" class="card-img-top" alt="Pastel" >
                 <div class="card-body">
                   <h5 class="card-title">postre 1</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">5990</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="6000">6000</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre2.jpg" class="card-img-top" alt="Pastelitos" width="200" height="200">
+                <img src="imagenes/Postres/postre2.jpg" class="card-img-top" alt="Pastelitos" >
                 <div class="card-body">
                   <h5 class="card-title">postre 2</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">5900</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre3.jpg" class="card-img-top" alt="Postres" width="200" height="200">
+                <img src="imagenes/Postres/postre3.jpg" class="card-img-top" alt="Postres" >
                 <div class="card-body">
                   <h5 class="card-title">postre 3</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">6000</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre4.jpg" class="card-img-top" alt="Postres" width="200" height="200">
+                <img src="imagenes/Postres/postre4.jpg" class="card-img-top" alt="Postres" >
                 <div class="card-body">
                   <h5 class="card-title">postre 4</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">7500</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
         </div>
 
         <div class="row my-5">
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre5.jpg" class="card-img-top" alt="Pastel" width="200" height="200">
+                <img src="imagenes/Postres/postre5.jpg" class="card-img-top" alt="Pastel" >
                 <div class="card-body">
                   <h5 class="card-title">postre 5</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">3000</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre6.jpg" class="card-img-top" alt="Pastelitos" width="200" height="200">
+                <img src="imagenes/Postres/postre6.jpg" class="card-img-top" alt="Pastelitos" >
                 <div class="card-body">
                   <h5 class="card-title">postre 6</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">2500</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre7.jpg" class="card-img-top" alt="Postres" width="200" height="200">
+                <img src="imagenes/Postres/postre7.jpg" class="card-img-top" alt="Postres" >
                 <div class="card-body">
                   <h5 class="card-title">postre 7</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">8000</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
             </div>
 
             <div class="card mx-2 my-2" style="width: 18rem;">
-                <img src="imagenes/Postres/postre8.jpg" class="card-img-top" alt="Postres" width="200" height="200">
+                <img src="imagenes/Postres/postre8.jpg" class="card-img-top" alt="Postres" >
                 <div class="card-body">
                   <h5 class="card-title">postre 8</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">7990</a>
+                  <a href="#" class="btn btn-primary precio-btn" data-precio="5990">5990</a>
                 </div>
         </div>
     </div>
-
-
 
 
 
@@ -134,5 +169,6 @@
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" 
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
 </body>
 </html>
